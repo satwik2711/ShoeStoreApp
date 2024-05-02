@@ -1,0 +1,60 @@
+#navbar {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(87,81,181);
+  font-size: 20px;
+}
+.bars {
+  display: none !important;
+  color: white;
+  padding: 10px 30px;
+}
+
+#navbar > a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 0px 15px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1.4px;
+  border-top: 2px solid rgb(87,81,181);
+}
+
+#navbar > a:hover {
+  border-bottom: 2px solid white;
+}
+
+@media screen and (max-width: 600px) {
+  #navbar {
+    flex-direction: column;
+  }
+
+  .bars {
+    display: inline-block !important;
+  }
+
+  .show {
+    display: block;
+    animation: showup 0.5s linear 0s;
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+@keyframes showup {
+  0% {
+    opacity: 0;
+    box-shadow: 5px 5px 15px #000000 inset;
+  }
+  50% {
+    opacity: 0.5;
+    box-shadow: 2px 2px 4px #000000 inset;
+  }
+  100% {
+    opacity: 1;
+    box-shadow: unset;
+  }
+}
